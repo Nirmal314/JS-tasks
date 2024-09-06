@@ -1,0 +1,23 @@
+.add-student-btn {
+  position: fixed;
+  z-index: 100;
+  bottom: 25px;
+  right: 50px;
+}
+
+tr {
+  cursor: pointer;
+}
+
+.invalid-feedback-visible {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: none !important;
+}

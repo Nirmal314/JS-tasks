@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ! bootstrap css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- ! bootstrap-icons css -->
+    <link rel="stylesheet" href="assets/bootstrap/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/bootstrap/icons/bootstrap-icons.min.css">
+
+    <!-- ! custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Task 4</title>
+
+    <!-- ! popperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <!-- ! bootstrap js  -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- ! ----------------------------------------------------------------------- -->
+    <!-- !                                 sidebar                                 -->
+    <!-- ! ----------------------------------------------------------------------- -->
+    <div class="text-dark m-0 bg-white z-3" id="sidebar">
+        <ul class="mb-4 sidebar-ul">
+            <li class="mb-4 d-flex align-items-center border-0 bg-transparent">
+                <img src="assets/images/dabang-purple.svg" alt="Logo" width="60" height="60" class="sidebar-icons ">
+                <span class="sidebar-nav-text fs-3 fw-bolder ">Dabang</span>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-pie-chart sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="material-symbols-outlined sidebar-icons fs-3 text-grey">
+                        show_chart
+                    </i>
+                    <span class="sidebar-nav-text">
+                        Leaderboard
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-cart3 sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Order
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-bag sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Products
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-graph-up sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Sales Report
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-chat-left-dots sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Messages
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-gear sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Settings
+                    </span>
+                </a>
+            </li>
+            <li class="sidebar-li rounded-4 mb-3 border-0 p-3 rounded-4 bg-transparent">
+                <a href="#" class="sidebar-a d-flex align-items-center fw-light text-grey text-decoration-none">
+                    <i class="bi bi-box-arrow-right sidebar-icons fs-3 text-grey"></i>
+                    <span class="sidebar-nav-text">
+                        Sign Out
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div class="m-5" id="sidebar-card">
+            <div class="card bg-transparent border-0 text-white">
+                <img src="assets/images/get-pro-bg.svg" class="" alt="...">
+                <div class="card-img-overlay d-flex flex-column justify-content-between align-items-center py-4">
+                    <img src="assets/images/dabang-white.svg" alt="" />
+                    <h5 class="card-title" style="font-size: 20px; font-weight: 600;">Dabang Pro</h5>
+                    <p class="card-text text-center" style="font-size: 12px; font-weight: 500;">Get access to
+                        all features on tetumbas</p>
+                    <button class="btn btn-light px-4 text-purple" style="font-size: 16px; font-weight: 600;">Get
+                        Pro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid g-0">
+        <div id="main-container" class="border-0">
+            <!-- ! ----------------------------------------------------------------------- -->
+            <!-- !                                 navbar                                  -->
+            <!-- ! ----------------------------------------------------------------------- -->
+            <nav id="navbar" class="navbar navbar-light bg-white">
+                <button id="pc-btn" onclick="openSidebar()" class="navbar-toggler border-0 outline-none" type="button"
+                    aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button id="mobile-btn" onclick="openSidebarMobile()" class="navbar-toggler border-0 outline-none"
+                    type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="nav-right" class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                    <form class="nav-right-i1 position-relative">
+                        <input class="form-control w-full input-grey border-0 me-2 ps-5" type="search"
+                            placeholder="Search here..." aria-label="Search">
+                        <img src="assets/images/search.svg" class="position-absolute input-position" />
+                    </form>
+                    <button class="nav-right-i2 btn btn-outline-primary border-0 position-relative bg-notification">
+                        <div class="position-absolute notification-dot"></div>
+                        <i class="bi bi-bell text-warning fs-4"></i>
+                    </button>
+                    <div class="btn-group">
+                        <button type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="assets/images/profile.svg" class="me-2" />
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex flex-nowrap" style="font-size: 16px; font-weight: 500;">
+                                        <span>Musfiq</span> <span class="dropdown-toggle ms-2"></span>
+                                    </div>
+                                    <div class="text-grey text-start " style="font-size: 14px; font-weight: 500;">
+                                        Admin
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu rounded-0 dropdown-menu-end border-0 profile-shadow">
+                            <li><button class="dropdown-item" type="button">
+                                    <a class="text-dark text-decoration-none" href="#">
+                                        Profile
+                                    </a>
+                                </button></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><button class="dropdown-item" type="button">
+                                    <a class="text-dark text-decoration-none" href="#">
+                                        My Account
+                                    </a>
+                                </button></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><button class="dropdown-item" type="button">
+                                    <a class="text-dark text-decoration-none" href="#">
+                                        Logout
+                                    </a>
+                                </button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ! ----------------------------------------------------------------------- -->
+            <!-- !                                body grid                                -->
+            <!-- ! ----------------------------------------------------------------------- -->
+
+            <div class="container-fluid gx-5">
+                <div class="row gy-4 mb-4 mt-2 d-flex ">
+                    <!-- ! ----------------------------------------------------------------------- -->
+                    <!-- !                          today's sales                                  -->
+                    <!-- ! ----------------------------------------------------------------------- -->
+                    <div class="col-xl-8 main-card-1">
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="card-body">
+                                <div class="container-fluid">
+                                    <div id="today-sales-export-section"
+                                        class="mb-3 d-flex justify-content-between align-items-center px-2 w-full">
+                                        <div>
+                                            <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                                Today's Sales
+                                            </p>
+                                            <p class="text-grey" style="font-size: 16px;">
+                                                Sales Summary
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-export btn-outline-secondary">
+                                                <i class="bi bi-upload me-2 text-dark fs-6"></i>
+                                                <span style="color: #0F3659;">Export</span></button>
+                                        </div>
+                                    </div>
+                                    <div class="today-sale d-flex align-items-center w-full">
+                                        <div class="card h-100 m-3 rounded-4 border-0"
+                                            style="width: 16rem; background-color: #FFE2E5;">
+                                            <div class="card-body">
+                                                <p class="card-1-icon-body">
+                                                    <i class="fs-5 bi bi-file-bar-graph-fill text-light"></i>
+                                                </p>
+                                                <p style="font-size: 24px; font-weight: 600;" class="text-dark">$1k</p>
+                                                <p style="font-size: 16px;">Total Sales</p>
+                                                <p style="font-weight: 500; font-size: 12px; color: #4079ED;">+8% from
+                                                    yesterday</p>
+                                            </div>
+                                        </div>
+                                        <div class="card h-100 m-3 rounded-4 border-0"
+                                            style="width: 16rem; background-color: #FFF4DE;">
+                                            <div class="card-body">
+                                                <p class="card-2-icon-body">
+                                                    <i class="fs-5 bi bi-file-earmark-fill text-light"></i>
+                                                </p>
+                                                <p style="font-size: 24px; font-weight: 600;" class="text-dark">300</p>
+                                                <p style="font-size: 16px;">Total Order</p>
+                                                <p style="font-weight: 500; font-size: 12px; color: #4079ED;">+5% from
+                                                    yesterday</p>
+                                            </div>
+                                        </div>
+                                        <div class="card h-100 m-3 rounded-4 border-0"
+                                            style="width: 16rem; background-color: #DCFCE7;">
+                                            <div class="card-body">
+                                                <p class="card-3-icon-body">
+                                                    <i class="fs-5 bi bi-tag-fill text-light"
+                                                        style="transform: rotate(90deg);"></i>
+                                                </p>
+                                                <p style="font-size: 24px; font-weight: 600;" class="text-dark">5</p>
+                                                <p style="font-size: 16px;">Product Sold</p>
+                                                <p style="font-weight: 500; font-size: 12px; color: #4079ED;">+1.2% from
+                                                    yesterday</p>
+                                            </div>
+                                        </div>
+                                        <div class="card h-100 m-3 rounded-4 border-0"
+                                            style="width: 16rem; background-color: #F3E8FF;">
+                                            <div class="card-body">
+                                                <p class="card-4-icon-body">
+                                                    <i class="fs-5 bi bi-person-plus-fill text-white "></i>
+                                                </p>
+                                                <p style="font-size: 24px; font-weight: 600;" class="text-dark">8</p>
+                                                <p style="font-size: 16px;">New Customers</p>
+                                                <p style="font-weight: 500; font-size: 12px; color: #4079ED;">+0.5% from
+                                                    yesterday</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ! ----------------------------------------------------------------------- -->
+                    <!-- !                            Visitor Insights                             -->
+                    <!-- ! ----------------------------------------------------------------------- -->
+                    <div class="col-xl-4 main-card-2">
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="accordion card-body" id="accordionExample">
+                                <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                    Visitor's Insights
+                                </p>
+                                <div class="accordion-item mb-3">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                            Lorem Ipsum
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                            roots in
+                                            a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                            old.
+                                            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                                            looked up one of the more obscure Latin words, consectetu
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                                            aria-controls="collapseTwo">
+                                            Lorem Ipsum
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                            roots in
+                                            a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                            old.
+                                            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                                            looked up one of the more obscure Latin words, consectetu
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4 mb-4">
+                    <!-- ! ----------------------------------------------------------------------- -->
+                    <!-- !                              Visitor List                               -->
+                    <!-- ! ----------------------------------------------------------------------- -->
+                    <div class="col-xl-6 main-card-3">
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="card-body table-responsive  ">
+                                <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                    Visitor List
+                                </p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-muted text-nowrap fw-lighter" scope="col">#</th>
+                                            <th class="text-muted text-nowrap fw-lighter" scope="col">Name</th>
+                                            <th class="text-muted text-nowrap fw-lighter" scope="col">Join Date</th>
+                                            <th class="text-muted text-nowrap fw-lighter" scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap" scope="row">01</th>
+                                            <td class="fw-normal text-nowrap">Stephen P. Osborn</td>
+                                            <td class="fw-normal text-nowrap">17 Jan, 2023</td>
+                                            <td class="fw-normal text-nowrap">
+                                                <i class="mx-2 bi bi-pencil-square text-primary"></i>
+                                                <i class="bi bi-trash3 text-danger"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap" scope="row">02</th>
+                                            <td class="fw-normal text-nowrap">Odessa G. Mettler</td>
+                                            <td class="fw-normal text-nowrap">13 Feb, 2023</td>
+                                            <td class="fw-normal text-nowrap">
+                                                <i class="mx-2 bi bi-pencil-square text-primary"></i>
+                                                <i class="bi bi-trash3 text-danger"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap" scope="row">03</th>
+                                            <td class="fw-normal text-nowrap">Judith H. Richards</td>
+                                            <td class="fw-normal text-nowrap">13 Feb, 2023</td>
+                                            <td class="fw-normal text-nowrap">
+                                                <i class="mx-2 bi bi-pencil-square text-primary"></i>
+                                                <i class="bi bi-trash3 text-danger"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap" scope="row">04</th>
+                                            <td class="fw-normal text-nowrap">Jack B. Perez</td>
+                                            <td class="fw-normal text-nowrap">10 Feb, 2023</td>
+                                            <td class="fw-normal text-nowrap">
+                                                <i class="mx-2 bi bi-pencil-square text-primary"></i>
+                                                <i class="bi bi-trash3 text-danger"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap" scope="row">05</th>
+                                            <td class="fw-normal text-nowrap">Chris B. Ryant</td>
+                                            <td class="fw-normal text-nowrap">10 Feb, 2023</td>
+                                            <td class="fw-normal text-nowrap">
+                                                <i class="mx-2 bi bi-pencil-square text-primary"></i>
+                                                <i class="bi bi-trash3 text-danger"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="d-flex justify-content-center mt-5">
+                                    <button class="btn">
+                                        <p class="text-purple text-center">Read More</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 main-card-4">
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <!-- !                              Top Products                               -->
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="card-body table-responsive">
+                                <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                    Top Products
+                                </p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-muted py-3 fw-lighter" scope="col">#</th>
+                                            <th class="text-muted py-3 fw-lighter" scope="col">Name</th>
+                                            <th class="text-muted py-3 fw-lighter" scope="col">Popularity</th>
+                                            <th class="text-muted py-3 fw-lighter" scope="col">Sales</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap py-3" scope="row">01</th>
+                                            <td class="fw-normal text-nowrap py-3">Home Decor Range</td>
+                                            <td class="">
+                                                <div class="progress" style="margin-top: 1.25rem;">
+                                                    <div class="progress-bar progress-1-left" role="progressbar"
+                                                        style="width: 45%" aria-valuenow="45" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                    <div class="progress-bar progress-1-right" role="progressbar"
+                                                        style="width: 55%" aria-valuenow="55" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="fw-normal text-nowrap py-3">
+                                                <div class="rounded-3 progress-bar-1 d-flex justify-content-center align-content-center px-2 py-0"
+                                                    style="width: 50px;">
+                                                    <p class="mb-0">45%</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap py-3" scope="row">02</th>
+                                            <td class="fw-normal text-nowrap py-3">Disney Princess Pink Bag 18'</td>
+                                            <td class="">
+                                                <div class="progress" style="margin-top: 1.25rem;">
+                                                    <div class="progress-bar progress-2-left" role="progressbar"
+                                                        style="width: 29%" aria-valuenow="29" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                    <div class="progress-bar progress-2-right" role="progressbar"
+                                                        style="width: 71%" aria-valuenow="71" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="fw-normal text-nowrap py-3">
+                                                <div class="rounded-3 progress-bar-2 d-flex justify-content-center align-content-center px-2 py-0"
+                                                    style="width: 50px;">
+                                                    <p class="mb-0">29%</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-nowrap py-3" scope="row">03</th>
+                                            <td class="fw-normal text-nowrap py-3">Bathroom Essentials</td>
+                                            <td class="">
+                                                <div class="progress" style="margin-top: 1.25rem;">
+                                                    <div class="progress-bar progress-3-left" role="progressbar"
+                                                        style="width: 18%" aria-valuenow="18" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                    <div class="progress-bar progress-3-right" role="progressbar"
+                                                        style="width: 82%" aria-valuenow="82" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="fw-normal text-nowrap py-3">
+                                                <div class="rounded-3 progress-bar-3 d-flex justify-content-center align-content-center px-2 py-0"
+                                                    style="width: 50px;">
+                                                    <p class="mb-0">18%</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="">
+                                            <th class="fw-normal text-nowrap py-3" scope="row">04</th>
+                                            <td class="fw-normal text-nowrap py-3">Apple Smartwatches</td>
+                                            <td class="">
+                                                <div class="progress" style="margin-top: 1.25rem;">
+                                                    <div class="progress-bar progress-4-left" role="progressbar"
+                                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                    <div class="progress-bar progress-4-right" role="progressbar"
+                                                        style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </td>
+                                            <td class="fw-normal text-nowrap py-3">
+                                                <div class="rounded-3 progress-bar-4 d-flex justify-content-center align-content-center px-2 py-0"
+                                                    style="width: 50px;">
+                                                    <p class="mb-0">25%</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-4 mb-4">
+                    <div class="col-xl-6 main-card-5">
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <!-- !                              Main Products                              -->
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="card-body">
+                                <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                    Main Products
+                                </p>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="product-1-tab" data-bs-toggle="tab"
+                                            data-bs-target="#product-1" type="button" role="tab"
+                                            aria-controls="product-1" aria-selected="true">Product-1</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="product-2-tab" data-bs-toggle="tab"
+                                            data-bs-target="#product-2" type="button" role="tab"
+                                            aria-controls="product-2" aria-selected="false">Product-2</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="product-1" role="tabpanel"
+                                        aria-labelledby="product-1-tab">
+                                        <div class="card mb-3 w-full border-0">
+                                            <div class="row g-0 mt-4 justify-content-center align-content-center ">
+                                                <div
+                                                    class="col-md-auto d-flex justify-content-center align-content-center py-3">
+                                                    <img src="assets/images/p-1.jpg" class="img-fluid rounded-2"
+                                                        width="75" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <p class="card-title"
+                                                            style="font-size: 14px; font-weight: 500;">What is this
+                                                            Product - 1?</p>
+                                                        <p class="card-text" style="font-size: 12px; font-weight: 400;">
+                                                            There are many variations of passages of Lorem Ipsum
+                                                            available,
+                                                            but the majority have suffered alteration in some form, by
+                                                            injected humour,
+                                                            or randomised words which don't look even slightly
+                                                            believable. If you are going to
+                                                            use a passage of Lorem Ipsum, you need to be sure there
+                                                            isn't anything embarrassing
+                                                            hidden in the middle of text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="product-2" role="tabpanel"
+                                        aria-labelledby="product-2-tab">
+                                        <div class="card mb-3 w-full border-0">
+                                            <div class="row g-0 mt-4 justify-content-center align-content-center ">
+                                                <div
+                                                    class="col-md-auto d-flex justify-content-center align-content-center py-3">
+                                                    <img src="assets/images/p-2.jpg" class="img-fluid rounded-2"
+                                                        width="75" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <p class="card-title"
+                                                            style="font-size: 14px; font-weight: 500;">What is this
+                                                            Product - 2?</p>
+                                                        <p class="card-text" style="font-size: 12px; font-weight: 400;">
+                                                            There are many variations of passages of Lorem Ipsum
+                                                            available,
+                                                            but the majority have suffered alteration in some form, by
+                                                            injected humour,
+                                                            or randomised words which don't look even slightly
+                                                            believable. If you are going to
+                                                            use a passage of Lorem Ipsum, you need to be sure there
+                                                            isn't anything embarrassing
+                                                            hidden in the middle of text.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 main-card-6">
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <!-- !                        Sales Mapping by Country                         -->
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="card-body">
+                                <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                    Sales Mapping by Country
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <img class="img-fluid" src="assets/images/world-map.png" alt="world-map" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 main-card-7">
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <!-- !                         Volume vs Service Level                         -->
+                        <!-- ! ----------------------------------------------------------------------- -->
+                        <div class="card h-100 w-full card-shadow">
+                            <div class="card-body">
+                                <p class="h1 mb-4" style="font-size: 20px; font-weight: 600;">
+                                    Volume vs Service Level
+                                </p>
+                                <div class="d-flex justify-content-evenly align-items-end">
+                                    <img src="assets/images/bar1.png" class="bar1 img-fluid" alt="...">
+                                    <img src="assets/images/bar2.png" class="bar2 img-fluid" alt="...">
+                                    <img src="assets/images/bar3.png" class="bar3 img-fluid" alt="...">
+                                    <img src="assets/images/bar4.png" class="bar4 img-fluid" alt="...">
+                                    <img src="assets/images/bar5.png" class="bar5 img-fluid" alt="...">
+                                    <img src="assets/images/bar6.png" class="bar6 img-fluid" alt="...">
+                                </div>
+                                <hr color="#EDF2F6">
+                                <div class="d-flex justify-content-evenly align-items-center">
+                                    <div>
+                                        <p class="volume">Volume</p>
+                                        <p>1,135</p>
+                                    </div>
+                                    <div class="vl"></div>
+                                    <div>
+                                        <p class="services">Services</p>
+                                        <p>635</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

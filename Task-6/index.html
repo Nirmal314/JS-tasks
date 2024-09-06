@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ! custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ! bootstrap css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- ! bootstrap js  -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
+
+    <!-- ! bootstrap-icons css -->
+    <link rel="stylesheet" href="assets/bootstrap/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/bootstrap/icons/bootstrap-icons.min.css">
+
+
+    <title>Task 6</title>
+</head>
+
+<body>
+    <div class="container-fluid min-vh-100" id="result">
+        <h2 class="fw-bold text-center my-3 text-decoration-underline">
+            Student Details
+        </h2>
+        <div class="table-responsive">
+            <table class="mt-2 table table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-nowrap" scope="col">
+                            First Name
+                        </th>
+                        <th class="text-nowrap" scope="col">
+                            Last Name
+                        </th>
+                        <th class="text-nowrap" scope="col">
+                            Date of Birth
+                        </th>
+                        <th class="text-nowrap" scope="col">
+                            Email
+                        </th>
+                        <th class="text-nowrap" scope="col">
+                            Address
+                        </th>
+                        <th class="text-nowrap" scope="col">
+                            Graduation Year
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="result-table">
+
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-outline-primary add-student-btn" data-bs-toggle="modal"
+            data-bs-target="#myModal">
+            Add student
+        </button>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header py-1" style="padding: 0 4.5rem;">
+                    <h1 class="modal-title fw-bold">Student Form</h1>
+                    <button type="button" class="btn-close" id="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form novalidate id="student-form" class="container-fluid px-3 px-lg-5 mb-4">
+
+                        <!-- ! student details. -->
+                        <div class="row">
+                            <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+                                <label class="form-label mb-1" for="fname">First Name <span class="text-danger">*</span>
+                                </label>
+                                <input required class="form-control" type="text" id="fname" name="fname"
+                                    placeholder="First Name" />
+                                <div class="invalid-feedback" id="fname-error"></div>
+                            </div>
+                            <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+                                <label class="form-label mb-1" for="lname">Last Name <span class="text-danger">*</span>
+                                </label>
+                                <input required class="form-control" type="text" id="lname" name="lname"
+                                    placeholder="Last Name" />
+                                <div class="invalid-feedback" id="lname-error"></div>
+                            </div>
+                            <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+                                <label class="form-label mb-1" for="dob">Date Of Birth <span
+                                        class="text-danger">*</span> </label>
+                                <input required class="form-control" type="date" placeholder="DD-MM-YYYY" id="dob"
+                                    name="dob" />
+                                <!-- <div class="invalid-feedback">Please enter valid date of birth.</div> -->
+                                <div class="invalid-feedback" id="dob-error"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+                                <label class="form-label mb-1" for="email">Email <span class="text-danger">*</span>
+                                </label>
+                                <input required class="form-control" type="text" id="email" name="email"
+                                    placeholder="Email" />
+                                <!-- <div class="invalid-feedback">Please enter a valid email.</div> -->
+                                <div class="invalid-feedback" id="email-error"></div>
+                            </div>
+                            <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+                                <label class="form-label mb-1" for="address">Address <span class="text-danger">*</span>
+                                </label>
+                                <textarea rows="1" required class="form-control" type="text" id="address" name="address"
+                                    placeholder="Address"></textarea>
+                                <!-- <div class="invalid-feedback">Please enter a valid address.</div> -->
+                                <div class="invalid-feedback" id="address-error"></div>
+                            </div>
+                            <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+                                <label class="form-label mb-1" for="gyear">Graduation Year <span
+                                        class="text-danger">*</span> </label>
+                                <input required class="form-control" type="month" placeholder="MM-YYYY" id="gyear"
+                                    name="gyear" />
+                                <!-- <div class="invalid-feedback">Please enter a valid graduation year.</div> -->
+                                <div class="invalid-feedback" id="gyear-error"></div>
+                            </div>
+                        </div>
+                        <hr class="mt-5">
+
+                        <!-- ! education details. -->
+                        <div id="education-form">
+                            <div class="modal-header border-0">
+                                <h1 class="modal-title fw-bold">Education</h1>
+                                <button type="button" id="add-row-btn" class="btn btn-outline-primary ">
+                                    Add row
+                                </button>
+                            </div>
+                            <hr class="mt-3">
+                            <div id="input-container">
+                                <div class="row d-none d-lg-flex">
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <p class="fs-5 text-nowrap fw-medium">
+                                            Degree/Board
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <p class="fs-5 text-nowrap fw-medium">
+                                            School/College
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <p class="fs-5 text-nowrap fw-medium">
+                                            Start Date
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <p class="fs-5 text-nowrap fw-medium">
+                                            Passout Year
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <p class="fs-5 text-nowrap fw-medium">
+                                            Percentage
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <p class="fs-5 text-nowrap fw-medium">
+                                            Backlog
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none"
+                                            for="degreeOrBoard1">Degree/Board</label>
+                                        <input class="form-control" type="text" id="degreeOrBoard1"
+                                            name="degreeOrBoard1" placeholder="Degree/Board" />
+                                        <div class="invalid-feedback" id="error-degreeOrBoard1"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none"
+                                            for="schoolOrCollege1">School/College</label>
+                                        <input class="form-control" type="text" id="schoolOrCollege1"
+                                            name="schoolOrCollege1" placeholder="School/College" />
+                                        <div class="invalid-feedback" id="error-schoolOrCollege1"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none" for="sdate1">Start Date</label>
+                                        <input class="form-control" type="month" id="sdate1" name="sdate1" />
+                                        <div class="invalid-feedback" id="error-sdate1"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none" for="passYear1">Passout
+                                            Year</label>
+                                        <input class="form-control" type="month" id="passYear1" name="passYear1" />
+                                        <div class="invalid-feedback" id="error-passYear1"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none"
+                                            for="percentage1">Percentage</label>
+                                        <input class="form-control" type="text" id="percentage1" name="percentage1"
+                                            placeholder="Percentage" />
+                                        <div class="invalid-feedback" id="error-percentage1"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none" for="backlog1">Backlog</label>
+                                        <input class="form-control" min="0" max="30" type="number" id="backlog1"
+                                            name="backlog1" placeholder="Backlog" />
+                                        <div class="invalid-feedback" id="error-backlog1"></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none"
+                                            for="degreeOrBoard2">Degree/Board</label>
+                                        <input class="form-control" type="text" id="degreeOrBoard2"
+                                            name="degreeOrBoard2" placeholder="Degree/Board" />
+                                        <div class="invalid-feedback" id="error-degreeOrBoard2"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none"
+                                            for="schoolOrCollege2">School/College</label>
+                                        <input class="form-control" type="text" id="schoolOrCollege2"
+                                            name="schoolOrCollege2" placeholder="School/College" />
+                                        <div class="invalid-feedback" id="error-schoolOrCollege2"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none" for="sdate2">Start Date</label>
+                                        <input class="form-control" type="month" id="sdate2" name="sdate2" />
+                                        <div class="invalid-feedback" id="error-sdate2"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none" for="passYear2">Passout
+                                            Year</label>
+                                        <input class="form-control" type="month" id="passYear2" name="passYear2" />
+                                        <div class="invalid-feedback" id="error-passYear2"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none"
+                                            for="percentage2">Percentage</label>
+                                        <input class="form-control" type="text" id="percentage2" name="percentage2"
+                                            placeholder="Percentage" />
+                                        <div class="invalid-feedback" id="error-percentage2"></div>
+                                    </div>
+                                    <div class="col-lg-2 mb-3 mb-lg-0 px-2 px-xl-4 d-flex flex-column">
+                                        <label class="form-label mb-1 d-block d-lg-none" for="backlog2">Backlog</label>
+                                        <input class="form-control" min="0" max="30" type="number" id="backlog2"
+                                            name="backlog2" placeholder="Backlog" />
+                                        <div class="invalid-feedback" id="error-backlog2"></div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-primary">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

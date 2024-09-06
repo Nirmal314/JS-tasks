@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" media="screen" href="styles/style.css">
+    <link rel="stylesheet" media="only screen and (max-width: 1288px)" href="styles/1288.css">
+    <link rel="stylesheet" media="only screen and (max-width: 954px)" href="styles/954.css">
+    <link rel="stylesheet" media="only screen and (max-width: 634px)" href="styles/634.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/logo-or-blue.png" alt="Shaligram" />
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+            <a class="account" href="#">Account</a>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="hamburger-menu">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+    </nav>
+    <main>
+        <!-- ! start about -->
+        <div class="about-us">
+            <div class="content">
+                <p class="about-text-1">LITTLE MORE ABOUT US</p>
+                <p class="about-text-2">YOUR KIDS IS OUR FUTURE</p>
+                <p class="about-text-3">Lorem ipsum dolor sit <br>
+                    amet, consectetur adipiscing elit, sed do eiusmod <br>
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <div class="child-img">
+                <img src="assets/child.png" alt="Child image" />
+            </div>
+        </div>
+        <!-- ! end about -->
+
+        <!-- ! start free classes -->
+        <div class="free-classes-section">
+            <div class="card card-1">
+                <p class="free-heading">Free Classes</p>
+                <p class="free-content">
+                    Ut enim ad cupidatat <br> non proident, sunt <br> mollit anim id est <br> laborum. consectetur ...
+                    <br> Ut Excepteur sint <br>
+                    occaecat minim <br> veniam, quis nostrud in <br> culpa qui officia <br> deserunt
+                </p>
+            </div>
+            <div class="card card-2">
+                <p class="free-heading">Free Classes</p>
+                <p class="free-content">
+                    Ut enim ad cupidatat <br> non proident, sunt <br> mollit anim id est <br> laborum. consectetur ...
+                    <br> Ut Excepteur sint <br>
+                    occaecat minim <br> veniam, quis nostrud in <br> culpa qui officia <br> deserunt
+                </p>
+            </div>
+            <div class="card card-3">
+                <p class="free-heading">Free Classes</p>
+                <p class="free-content">
+                    Ut enim ad cupidatat <br> non proident, sunt <br> mollit anim id est <br> laborum. consectetur ...
+                    <br> Ut Excepteur sint <br>
+                    occaecat minim <br> veniam, quis nostrud in <br> culpa qui officia <br> deserunt
+                </p>
+            </div>
+            <div class="card card-4">
+                <p class="free-heading">Free Classes</p>
+                <p class="free-content">
+                    Ut enim ad cupidatat <br> non proident, sunt <br> mollit anim id est <br> laborum. consectetur ...
+                    <br> Ut Excepteur sint <br>
+                    occaecat minim <br> veniam, quis nostrud in <br> culpa qui officia <br> deserunt
+                </p>
+            </div>
+        </div>
+        <!-- ! end free classes -->
+
+        <!-- ! start classes/camps -->
+        <div class="classes-camps">
+            <div class="content">
+                <p class="classes-camps-heading">Best Classes and Camps</p>
+                <p class="classes-camps-content">Quam quisque id diam vel quam elementum. Vestibulum lectus mauris
+                    ultrices eros in cursus turpis <br>
+                    massa tincidunt. Pellentesque habitant morbi tristique senectus et netus.</p>
+            </div>
+            <div class="card-container">
+                <div id="cc1-container">
+                    <img class="cc1-img" src="assets/cc1.png" alt="CC1" />
+                    <p id="cc1-content">One-of-a-kind Classes</p>
+                </div>
+                <div id="cc2-container">
+                    <img class="cc2-img" src="assets/cc2.png" alt="CC2" />
+                    <p id="cc2-content">Summer Camps</p>
+                </div>
+                <div id="cc3-container">
+                    <img class="cc3-img" src="assets/cc3.png" alt="CC3" />
+                    <p id="cc3-content">Summer Camps</p>
+                </div>
+            </div>
+        </div>
+        <!-- ! end classes/camps -->
+
+        <!-- ! start price section -->
+        <div class="price-section">
+            <p class="price-heading">We offer great <span style="color: #F17C21;">price</span> plan for the application
+            </p>
+            <div class="toggle">
+                <button id="monthlyBtn" class="active">Monthly</button>
+                <button id="yearlyBtn">Yearly</button>
+                <div class="slider"></div>
+            </div>
+            <div class="price-cards">
+                <div class="price-card-1">
+                    <p class="price-type">Starter</p>
+                    <p class="price-description">Starter pack to help you to <br> get started</p>
+                    <p class="price">Free</p>
+                    <button class="btn price-btn-primary">Get Started</button>
+                </div>
+                <div class="price-card-2">
+                    <p class="price-type">Pro</p>
+                    <p class="price-description">More power for small teams <br> create project plans with <br>
+                        confidence</p>
+                    <p class="price"><span class="dollar">$</span> <span id="pro-price" class="pro-price">20</span><span
+                            id="pro-per-duration" class="per-duration">/
+                            month</span> </p>
+                    <button class="price-btn-orange">Get Started</button>
+                </div>
+                <div class="price-card-3">
+                    <p class="price-type">Business+</p>
+                    <p class="price-description">For companies that need to <br> manage work happening <br> across
+                        multiple teams.
+                    </p>
+                    <p class="price"><span class="dollar">$</span> <span id="business-price"
+                            class="pro-price">100</span><span id="business-per-duration" class="per-duration">/
+                            month</span> </p>
+                    <button class="price-btn-primary">Get Started</button>
+                </div>
+                <div class="price-card-4">
+                    <p class="price-type">Enterprise</p>
+                    <p class="price-description">For enterprise that need <br> additional security, control, <br> and
+                        support.</p>
+                    <p class="price">Custom</p>
+                    <button class="price-btn-primary">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+        <!-- ! end price section -->
+
+        <!-- ! start call to action -->
+
+        <div class="call-to-action">
+            <p class="call-to-action-title">Call To Action</p>
+            <p class="call-to-action-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam voluptatibus voluptas, at eligendi beatae
+                dolore <br> tempore placeat a ad facere quia, praesentiu
+            </p>
+            <div>
+                <button class="get-started-btn">Get Started</button>
+            </div>
+        </div>
+
+        <!-- ! end call to action -->
+
+        <!-- ! start footer -->
+
+        <footer>
+            <!-- ? not responsive -->
+            <div class="footer-main">
+                <div class="footer-upper">
+                    <div class="content">
+                        <img src="assets/circle.png" alt="circle" />
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Quam voluptatibus voluptas, at
+                            eligendi beatae dolore <br> tempore placeat a ad facere quia, praesentiu</p>
+                    </div>
+                    <div class="subscribe-section">
+                        <p class="subscribe-title">
+                            Subscribe to our newsletter
+                        </p>
+                        <div class="subscribe-input">
+                            <input type="text" placeholder="Enter your email" />
+                            <button>Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-lower">
+                    <div class="copyright">
+                        <p>Copyright © 2024 - Shaligraminfotech</p>
+                    </div>
+                    <div class="social-links">
+                        <div class="social-body"><img src="assets/whatsapp.svg" /></div>
+                        <div class="social-body"><img src="assets/instagram.svg" /></div>
+                        <div class="social-body"><img src="assets/facebook.svg" /></div>
+                        <div class="social-body"><img src="assets/youtube.svg" /></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <script src="scripts/main.js">
+
+    </script>
+</body>
+
+</html>

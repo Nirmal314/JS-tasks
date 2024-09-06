@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ! custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ! bootstrap css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- ! bootstrap js  -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
+
+    <!-- ! bootstrap-icons css -->
+    <link rel="stylesheet" href="assets/bootstrap/icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/bootstrap/icons/bootstrap-icons.min.css">
+
+
+    <title>Task 5</title>
+
+</head>
+
+<body>
+    <div class="container-fluid" id="result">
+        <h2 class="fw-bold text-center my-3 text-decoration-underline">
+            Student Details
+        </h2>
+        <div class="table-responsive">
+            <table id="result-table" class="mt-2 table table-striped table-hover">
+            </table>
+        </div>
+    </div>
+
+    <div class="col-lg-4 mb-3 px-2 px-xl-4 d-flex flex-column">
+        <label class="form-label mb-1" for="email">Email</label>
+        <input required class="form-control" type="text" id="email" name="email" placeholder="Email" />
+        <!-- <div class="invalid-feedback">Please enter a valid email.</div> -->
+        <div class="invalid-feedback" id="email-error"></div>
+    </div>
+    <script src="assets/js/result.js"></script>
+</body>
+
+</html>

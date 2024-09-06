@@ -1,0 +1,6 @@
+.about-us {
+  flex-direction: column-reverse;
+}
+.about-us > .content {
+  text-align: center;
+}
